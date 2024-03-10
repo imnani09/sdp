@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .jumbotron {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        .team-member {
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>About Us</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">About Us</h1>
+            <p class="lead">Welcome to the Tourism Management System! We are dedicated to providing a seamless and enjoyable experience for tourists and travel enthusiasts. Our platform is designed to make travel planning, booking, and management easy and efficient.</p>
+        </div>
+
+        <div>
+            <h2>Our Mission</h2>
+            <p>Our mission is to enhance the travel experience by providing a comprehensive and user-friendly platform that connects travelers with diverse destinations, accommodations, and activities.</p>
+        </div>
+
+        <div class="team-member">
+            <h2>Meet the Team</h2>
+            <p>We are a passionate team of developers, designers, and travel enthusiasts committed to creating innovative solutions for the tourism industry. Get to know the individuals who make this project possible:</p>
+            <ul>
+                <li>Hemanth - 2200030301</li>
+                <li>Vijay Vardhan - 2200031213</li>
+                <li>Gyanadeep Dodla - 2200032546</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Our Vision</h2>
+            <p>We envision a world where travel is accessible, enjoyable, and enriching for everyone. Through our Tourism Management System, we strive to contribute to the growth of the global tourism industry and foster cultural exchange.</p>
+        </div>
+    </div>
+    <a href="{% url 'homepage' %}" class="back-button">Back</a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Packages</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .card {
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .card-header {
+      background-color: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      border-radius: 15px 15px 0 0;
+    }
+    .card-body {
+      padding: 30px;
+      text-align: center;
+    }
+    .card-title {
+      font-size: 30px;
+      font-weight: bold;
+      color: #343a40;
+    }
+    .card-text {
+      color: #555;
+    }
+    .btn-pay {
+      background-color: #343a40;
+      border-color: #343a40;
+      color: #fff;
+      border-radius: 20px;
+    }
+    .btn-pay:hover {
+      background-color: #23272b;
+      border-color: #23272b;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Choose Your Package</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" style="background-color: #f8f9fa;">
+        <div class="card-header" style="background-color: #007bff;">
+          Standard Package
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">$1500</h5>
+          <p class="card-text">Includes basic amenities and services.</p>
+          <a href="#" class="btn btn-primary btn-pay">Pay Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="background-color: #f8f9fa;">
+        <div class="card-header" style="background-color: #20b2aa;">
+          Deluxe Package
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">$3000</h5>
+          <p class="card-text">Includes additional amenities and services.</p>
+          <a href="#" class="btn btn-primary btn-pay">Pay Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="background-color: #f8f9fa;">
+        <div class="card-header" style="background-color: #ff4500;">
+          Luxury Package
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">$5000</h5>
+          <p class="card-text">Includes premium amenities and services.</p>
+          <a href="#" class="btn btn-primary btn-pay">Pay Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<a href="{% url 'packagespage' %}" class="back-button">Back</a>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transportation Services</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .jumbotron {
+      background-image: url('https://via.placeholder.com/1500x600');
+      background-size: cover;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      padding: 80px 0;
+      margin-bottom: 0;
+    }
+    .service {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .service:hover {
+      transform: translateY(-5px);
+    }
+    .service h3 {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1 class="display-4">Transportation Services</h1>
+  <p class="lead">Explore our transportation options for a comfortable journey</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-6">
+      <div class="service">
+        <h3>Car Rental</h3>
+        <img src="https://img.freepik.com/free-vector/buying-renting-new-used-speedy-sports-car_3446-651.jpg?size=626&ext=jpg&ga=GA1.1.363368635.1709982575&semt=ais" class="img-fluid" alt="Car Rental Image">
+        <p>Choose from our fleet of vehicles for your travel needs. From compact cars to luxury SUVs, we have it all.</p>
+      </div>
+    </div>
+    <!-- Remaining service cards -->
+    <div class="col-lg-4 col-md-6">
+        <div class="service">
+          <h3>Airport Shuttle</h3>
+          <img src="https://img.freepik.com/free-vector/plane-boarding-concept-illustration_114360-20500.jpg?t=st=1709991723~exp=1709995323~hmac=c5239c80f3171f77a25899f43f48a282224024b447178244cc6d7d971bb61e21&w=996" class="img-fluid" alt="Car Rental Image">
+          <p>Book our convenient airport shuttle service for a hassle-free transfer to and from the airport.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service">
+          <h3>Bus Tours</h3>
+          <img src="https://img.freepik.com/free-vector/guide-excursion-composition-with-characters-guide-group-tourists-top-sightseeing-bus-vector-illustration_1284-66013.jpg?w=996" class="img-fluid" alt="Car Rental Image">
+          <p>Embark on an exciting bus tour to explore the attractions of your destination with comfort and convenience</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service">
+          <h3>Train Tickets</h3>
+          <img src="https://img.freepik.com/premium-vector/ticket-booking-through-smartphone-indian-railway-online-booking-vector_549515-156.jpg?w=826" class="img-fluid" alt="Car Rental Image">
+          <p>Travel seamlessly by booking train tickets through our platform, and enjoy scenic journeys to your destination.</p>
+        </div>
+      </div>
+  </div>
+</div>
+<a href="{% url 'travelpage' %}" class="back-button">Back</a>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

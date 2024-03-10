@@ -1,0 +1,30 @@
+{% extends 'projectnavbar.html' %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+{% block body %}
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("{% static 'images/home.jpg' %}") no-repeat center fixed;
+            background-size: 100%;
+            background-size: cover; /* Adjust the size as needed */
+            background-color: #AFF0DB     ; /* Change this color code as needed */
+        }
+
+        /* Additional styles can be added here */
+        h1 {
+            color: white;
+            padding-top: 50vh; /* Adjust as needed */
+        }
+    </style>
+{% endblock %}
+</body>
+</html>

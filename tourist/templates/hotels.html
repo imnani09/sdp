@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom font */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Card styling */
+        .card {
+            border: none;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .card-title {
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        /* Button styling */
+        .btn-primary {
+            background-color: #FF6F61;
+            border-color: #FF6F61;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #E85A4F;
+            border-color: #E85A4F;
+        }
+
+        /* Back button styling */
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            color: #000; /* Black font color */
+            z-index: 999; /* Ensure it appears above other elements */
+        }
+    </style>
+</head>
+<body>
+    <section id="hotels" class="container mt-5">
+        <h2 class="text-center mb-4">Our Partner Hotels</h2>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="card mb-4">
+                    <img src="https://content.r9cdn.net/rimg/himg/ba/99/f8/expediav2-373103-1904751757-432428.jpg?width=1200&height=630&crop=true" class="card-img-top" alt="Hotel 1 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Azure Heights Resort</h5>
+                        <p class="card-text">Azure Heights Resort offers a serene escape nestled amidst breathtaking mountain landscapes and azure skies. This idyllic retreat combines luxurious accommodations with unparalleled natural beauty, providing guests with an unforgettable experience of relaxation and rejuvenation.</p>
+                        <a href="{% url 'hotelspaymentpage' %}" class="btn btn-primary btn-block">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card mb-4">
+                    <img src="https://gos3.ibcdn.com/9013ef38-8094-4726-953a-0236911ab483.jpg" class="card-img-top" alt="Hotel 2 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Whispering Pines Retreat</h5>
+                        <p class="card-text">Welcome to Whispering Pines Retreat, where the gentle rustle of pine trees and the soothing melody of nature create an ambiance of tranquility. Nestled in a secluded forest setting, this enchanting retreat offers a serene escape from the hustle and bustle of everyday life. </p>
+                        <a href="{% url 'hotelspaymentpage' %}" class="btn btn-primary btn-block">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card mb-4">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/202715199.jpg?k=a68274c201c33108e8df25ceee96363e8491c8047bf91ca1a16126fdbabd09f5&o=&hp=1" class="card-img-top" alt="Hotel 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Crystal Waters Hotel</h5>
+                        <p class="card-text">Welcome to Crystal Waters Hotel, where luxury meets tranquility amidst stunning coastal vistas. Perched on the shores of a pristine crystal-clear lake or nestled along the glistening coastline, our hotel offers a retreat like no other. With sleek and modern architecture that seamlessly integrates with the natural surroundings, every corner of Crystal Waters exudes elegance and charm.</p>
+                        <a href="{% url 'hotelspaymentpage' %}" class="btn btn-primary btn-block">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- More hotel cards can be added here -->
+        </div>
+    </section>
+
+    <!-- Back button -->
+    <a href="{% url 'homepage' %}" class="back-button">Back</a>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
