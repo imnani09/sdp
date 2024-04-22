@@ -77,18 +77,40 @@ def registeruser(request):
         return redirect('homepage')
     
 
+# def loginuser(request):
+#     if request.method == 'POST':
+#             username = request.POST['username']
+#             password = request.POST['password']
+#             flag = User.objects.filter(Q(username=username, password=password))  # feild name,local variable and class variable.        
+#             if flag:
+#                 # login(request,User)
+#                 return redirect("homepage")       
+#             else:
+#                 return render(request, "loginfail.html")
+
 def loginuser(request):
+
     if request.method == 'POST':
-            username = request.POST['username']
-            password = request.POST['password']
-            flag = User.objects.filter(Q(username=username, password=password))  # feild name,local variable and class variable.        
-            if flag:
-                # login(request,User)
-                return redirect("homepage")       
-            else:
-                return render(request, "loginfail.html")
+        username = request.POST['username']
+        password = request.POST['password']
+
+        try:
+            user = User.objects.get(username=username, password=password)
+        except User.DoesNotExist:
+            user = None
+
+        if user is not None:
+            login(request, user, backend='adminapp.backends.CustomUserBackend')
+            return redirect('homepage')
+
+     
+
+    return render(request, 'loginfail.html')
 
 
+def logout_the_page(request):
+    logout(request)
+    return redirect('homepage')
 
 def contact_form(request):
     if request.method == 'POST':

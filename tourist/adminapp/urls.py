@@ -21,4 +21,5 @@ urlpatterns = [
     path('standard/',views.stndpage,name='stndpage'),
     path('transportation/',views.transportationpage,name='transportationpage'),
     path('payments/',views.paymentspage,name='paymentspage'),
+    path('logout/', views.logout_the_page, name='logoutPage'),
 ]
