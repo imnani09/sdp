@@ -17,11 +17,11 @@ def contact_form(request):
         send_mail(subject, message, sender_email, recipient_list, fail_silently=False)
         
         # Redirect after successful submission
-        return HttpResponseRedirect('/contact/thank-you/')  # Redirect to a thank you page
+        return HttpResponseRedirect('thank-you/')  # Redirect to a thank you page
         
     return render(request, 'contact.html')
-from django.shortcuts import render
 
 def thank_you(request):
     # Add any necessary logic here
-    return render(request, 'thank_you.html')  # Assuming you have a template named 'thank_you.html'
+    return render(request, 'thankyou.html')  # Assuming you have a template named 'thank_you.html'
+

@@ -83,7 +83,8 @@
 <body>
     <div class="container">
         <h1>Hotel Booking Payment</h1>
-        <form>
+        <form method="post" action="{% url 'hotel_booking' %}">
+            {% csrf_token %}
             <div class="mb-3">
                 <label for="fullName" class="form-label">Full Name</label>
                 <input type="text" id="fullName" name="fullName" class="form-control" required>

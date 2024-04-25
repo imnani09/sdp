@@ -19,5 +19,16 @@ class User(AbstractUser):
         return self.get_full_name()
     
     class Meta:
-        db_table = 'user_table'  
+        db_table = 'user_table'
+
+class HotelBooking(models.Model):
+    full_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+    credit_card = models.CharField(max_length=16)  # Assuming credit card number is 16 digits
+    expiry_date = models.CharField(max_length=5)  # Assuming expiry date format is MM/YY
+    cvv = models.CharField(max_length=4)          # Assuming CVV is 3 or 4 digits
+    
+    def __str__(self):
+        return self.full_name
 

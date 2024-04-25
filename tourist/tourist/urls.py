@@ -24,5 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('adminapp.urls')),
     path('contact/', views.contact_form, name='contact_form'),
-    path('contact/thank-you/', views.thank_you, name='thank_you'),
+    path('thank-you/', views.thank_you, name='thank_you'),
 ]

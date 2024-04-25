@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login , logout
 from django.db.models import Q
-from .models import User
+from .models import User,HotelBooking
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
@@ -126,6 +126,39 @@ def contact_form(request):
         send_mail(subject, message, sender_email, recipient_list, fail_silently=False)
         
         # Redirect after successful submission
-        return HttpResponseRedirect('/contact/thank-you/')  # Redirect to a thank you page
+        return redirect('thank_you')  # Redirect to a thank you page
         
     return render(request, 'contact.html')
+
+
+
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.core.mail import send_mail
+from django.conf import settings
+
+def hotel_booking(request):
+    if request.method == 'POST':
+        full_name = request.POST.get('fullName')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        credit_card = request.POST.get('creditCard')
+        expiry_date = request.POST.get('expiryDate')
+        cvv = request.POST.get('cvv')
+
+        # Save data to the database
+        booking = HotelBooking.objects.create(
+            full_name=full_name,
+            email=email,
+            phone=phone,
+            credit_card=credit_card,
+            expiry_date=expiry_date,
+            cvv=cvv
+        )
+        booking.save()
+
+        # Redirect after successful submission
+        return redirect('thank_you')  # Redirect to a thank you page
+
+    return render(request, 'hotels_payment.html')
+
